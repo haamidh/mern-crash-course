@@ -11,6 +11,7 @@ const CreatePage = () => {
 	const toast = useToast();
 
 	const { createProduct } = useProductStore();
+	
 
 	const handleAddProduct = async () => {
 		const { success, message } = await createProduct(newProduct);

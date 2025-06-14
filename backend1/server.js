@@ -5,13 +5,14 @@ import Product from './models/Product.js';
 import productRoutes from './routes/products.js'
 
 const  app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
 app.use('/api/products', productRoutes)
 
 
-app.listen(3000, () =>{
+app.listen(PORT, () =>{
     connectDB();
-    console.log('Server is running on port 3000');
+    console.log('Server is running on port '+PORT);
 });
